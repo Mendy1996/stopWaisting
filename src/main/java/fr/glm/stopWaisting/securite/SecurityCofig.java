@@ -60,6 +60,7 @@ public class SecurityCofig extends WebSecurityConfigurerAdapter {
 		// on préciser les roles qui ont acces aux differentes pages ou
 		// ressources
 		http.authorizeRequests().antMatchers("/stopWasting").hasRole("magasin");
+		http.authorizeRequests().antMatchers("/blog").hasRole("magasin");
 		// si le profil n'a pas le droit d'y acceder
 		http.exceptionHandling().accessDeniedPage("/403");
 		// lors du logout vider le cookie contenant la idssesion et l'invalider
