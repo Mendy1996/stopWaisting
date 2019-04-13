@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns:th="http:www.thymeleaf.org">
-
 <head>
 
   <meta charset="utf-8">
@@ -34,7 +33,7 @@
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action bg-light">Nouveau sujet</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">discution</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Categorie</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
@@ -87,8 +86,8 @@
   <!-- /#wrapper -->
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script th:src="@{/blog/vendor/jquery/jquery.min.js}" ></script>
+  <script th:src="@{/blog/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
 
   <!-- Menu Toggle Script -->
   <script>
