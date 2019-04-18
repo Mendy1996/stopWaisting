@@ -20,7 +20,7 @@ public class Produit implements Serializable  {
 	private Long id_produit;
 	private String libelle_produit;
 	private String description_produit;
-	private Date dlc;
+	private String dlc;
 	private int pourcentage_solde;
 	private String photo;
 	@ManyToOne
@@ -30,7 +30,7 @@ public class Produit implements Serializable  {
 	public Produit() {
 		super();
 	}
-	public Produit(String libelle_produit, String description_produit, Date dlc, int pourcentage_solde, String photo,
+	public Produit(String libelle_produit, String description_produit, String dlc, int pourcentage_solde, String photo,
 			CategorieProduit id_cat_Produit) {
 		super();
 		this.libelle_produit = libelle_produit;
@@ -58,10 +58,10 @@ public class Produit implements Serializable  {
 	public void setDescription_produit(String description_produit) {
 		this.description_produit = description_produit;
 	}
-	public Date getDlc() {
+	public String getDlc() {
 		return dlc;
 	}
-	public void setDlc(Date dlc) {
+	public void setDlc(String dlc) {
 		this.dlc = dlc;
 	}
 	public int getPourcentage_solde() {

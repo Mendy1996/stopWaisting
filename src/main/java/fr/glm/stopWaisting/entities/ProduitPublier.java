@@ -18,11 +18,11 @@ public class ProduitPublier implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id_publication;
-	private Date date_publication;
+	private String date_publication;
 	private Boolean disponible;
 	private Double quantite;
-	private Date date_fin;
-	private Date jour_retrait_invendu;
+	private String date_fin;
+	private String jour_retrait_invendu;
 	@ManyToOne
 	@JoinColumn(name="id_magasin")
 	private Utilisateur id_magasin;
@@ -34,8 +34,8 @@ public class ProduitPublier implements Serializable {
 		super();
 	}
 
-	public ProduitPublier(Date date_publication, Boolean disponible, Double quantite, Date date_fin,
-			Date jour_retrait_invendu, Utilisateur id_magasin, Utilisateur id_produit) {
+	public ProduitPublier(String date_publication, Boolean disponible, Double quantite, String date_fin,
+			String jour_retrait_invendu, Utilisateur id_magasin, Utilisateur id_produit) {
 		super();
 		this.date_publication = date_publication;
 		this.disponible = disponible;
@@ -54,11 +54,11 @@ public class ProduitPublier implements Serializable {
 		this.id_publication = id_publication;
 	}
 
-	public Date getDate_publication() {
+	public String getDate_publication() {
 		return date_publication;
 	}
 
-	public void setDate_publication(Date date_publication) {
+	public void setDate_publication(String date_publication) {
 		this.date_publication = date_publication;
 	}
 
@@ -78,19 +78,19 @@ public class ProduitPublier implements Serializable {
 		this.quantite = quantite;
 	}
 
-	public Date getDate_fin() {
+	public String getDate_fin() {
 		return date_fin;
 	}
 
-	public void setDate_fin(Date date_fin) {
+	public void setDate_fin(String date_fin) {
 		this.date_fin = date_fin;
 	}
 
-	public Date getJour_retrait_invendu() {
+	public String getJour_retrait_invendu() {
 		return jour_retrait_invendu;
 	}
 
-	public void setJour_retrait_invendu(Date jour_retrait_invendu) {
+	public void setJour_retrait_invendu(String jour_retrait_invendu) {
 		this.jour_retrait_invendu = jour_retrait_invendu;
 	}
 

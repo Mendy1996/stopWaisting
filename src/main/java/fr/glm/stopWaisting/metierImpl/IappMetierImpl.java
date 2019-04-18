@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import fr.glm.stopWaisting.dao.ProduitRepository;
 import fr.glm.stopWaisting.dao.ProfilRepository;
+import fr.glm.stopWaisting.entities.Produit;
 import fr.glm.stopWaisting.entities.Profil;
 import fr.glm.stopWaisting.metier.IappMetier;
 
@@ -29,6 +31,9 @@ public class IappMetierImpl implements IappMetier {
 	@Autowired
 	ProfilRepository profilRepository;
 	
+	@Autowired
+	ProduitRepository produitRepository;
+	
 	@Override
 	public Profil ajouterProfil(Profil p) {
 		return profilRepository.save(p);
@@ -37,6 +42,17 @@ public class IappMetierImpl implements IappMetier {
 	@Override
 	public List<Profil> listProfil() {
 		return profilRepository.findAll();
+	}
+	
+	@Override
+	public List<Produit> listProduit() {
+		return produitRepository.findAll();
+	}
+
+	@Override
+	public List<Produit> listProduitCathegorie(int id) {
+		// TODO Auto-generated method stub
+		return produitRepository.findProduitCathegorie(id);
 	}
 
 }

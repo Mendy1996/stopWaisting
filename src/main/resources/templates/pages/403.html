@@ -8,8 +8,15 @@
 	th:href="@{/bootstrap/css/bootstrap.min.css}">
 </head>
 <body>
-	<div th:replace="fragments/topnav :: topNav">
+	<header> 
+	<div class="navbar navbar-inverse">
+		<div class="container-fluid">
+		<ul class="nav navbar-nav navbar-right">
+		<li> <a th:href="@{logout}"> Deconnexion</</a> </li>
+		</ul>
+		</div>
 	</div>
+	</header>
 
 <div class="red">Vous n'avez pas le droit acceder à cette ressource </div>
 </body>
